@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Inicio - Ejemplo Supabase</title>
+  <link rel="stylesheet" href="diseño.css">
+  
+  <!-- Carga la librería Supabase globalmente -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">MiProyecto</div>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#supabase">Base de Datos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio">
+    <h1>Bienvenido a la Página de Prueba</h1>
+    <p>Este es un diseño web responsive conectado con tu base de datos de Supabase.</p>
+    <a href="#supabase" class="btn">Probar Operaciones</a>
+  </section>
+
+  <section class="supabase-section" id="supabase">
+    <div class="card-large">
+      <h2>Prueba de Base de Datos</h2>
+      <p>Ingresa una frase, comando u operación desde tu teclado para registrarla en Supabase:</p>
+      
+      <div class="form-group">
+        <input type="text" id="input-operacion" placeholder="Escribe algo aquí (ej: Sumar 10 + 20)...">
+        <div class="button-group">
+          <button id="btn-guardar" type="button" class="btn-primary">Guardar Registro</button>
+          <button id="btn-consultar" type="button" class="btn-secondary">Consultar Todo</button>
+        </div>
+      </div>
+
+      <div id="resultados" class="resultados-box">
+        <p>Los datos consultados o resultados aparecerán aquí.</p>
+      </div>
+    </div>
+  </section>
+
+  <main class="features" id="servicios">
+    <div class="card">
+      <h3>Diseño Limpio</h3>
+      <p>Estructura clara y responsive utilizando CSS Grid y Flexbox.</p>
+    </div>
+    <div class="card">
+      <h3>Fácil Adaptación</h3>
+      <p>Modifica colores, fuentes y contenido según tus necesidades.</p>
+    </div>
+    <div class="card">
+      <h3>Conexión Supabase</h3>
+      <p>Conexión directa vía CDN para funcionar en cualquier entorno.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 MiProyecto - Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
