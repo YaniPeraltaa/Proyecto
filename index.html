@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boutique de Lencería - Tienda Online</title>
+  <link rel="stylesheet" href="diseno2.css">
+  
+  <!-- Supabase CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script type="module" src="app.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">✨ Lencería & Estilo</div>
+      <ul class="nav-links">
+        <li><a href="#inicio" class="active">Inicio</a></li>
+        <li><a href="#catalogo">Catálogo Exclusivo</a></li>
+        <li><a href="#ventas">Mi Carrito 🛒 (<span id="contador-carrito">0</span>)</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- SECCIÓN: INICIO (HERO) -->
+  <section class="hero app-section" id="inicio">
+    <h1>Colección Exclusiva de Lencería</h1>
+    <p>Encuentra tu talle ideal, variedad de colores y las mejores marcas. Compra directa en línea con envío a todo el país.</p>
+    <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1.5rem;">
+      <a href="#catalogo" class="btn">Ver Catálogo Completo</a>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: CATÁLOGO DE PRODUCTOS (Estilo Foto de Referencia) -->
+  <section class="supabase-section app-section" id="catalogo" style="display:none;">
+    <div class="card-large" style="max-width: 1200px;">
+      <h2>Catálogo de Artículos</h2>
+      <p>Busca por marca, prenda o código:</p>
+      
+      <div class="form-group" style="flex-direction: row; gap: 0.5rem;">
+        <input type="text" id="input-buscar-cat" placeholder="Ej: Belen, Kaury, Aretha, Conjunto..." style="flex: 1;">
+        <button id="btn-buscar-cat" type="button" class="btn-primary">Buscar</button>
+        <button id="btn-vertodo-cat" type="button" class="btn-secondary">Ver Todo</button>
+      </div>
+
+      <!-- Grilla de Productos Estilo Tienda -->
+      <div id="resultados-catalogo" style="margin-top: 2rem;">
+        <p class="cargando">Cargando productos y fotos reales...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: CARRITO Y CHECKOUT -->
+  <section class="supabase-section app-section" id="ventas" style="display:none;">
+    <div class="card-large" style="max-width: 800px;">
+      <h2>🛒 Carrito de Compras</h2>
+      
+      <div id="lista-carrito" class="resultados-box" style="min-height: 100px; margin-top: 1rem;">
+        <p>El carrito está vacío.</p>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; margin: 1.5rem 0; padding: 1rem; background:#fcefe3; border-radius:6px;">
+        <span style="font-size: 1.2rem; font-weight: bold; color: #581825;">Total a Pagar:</span>
+        <span id="total-venta" style="font-size: 1.8rem; font-weight: bold; color: #6b1d2f;">$0.00</span>
+      </div>
+
+      <div class="form-group">
+        <input type="text" id="nombre-cliente" placeholder="Tu Nombre y Apellido / Teléfono de Contacto">
+        <button id="btn-confirmar-venta" type="button" class="btn-primary" style="background-color: #2e6930; font-size: 1.1rem; padding: 1rem;">Finalizar Pedido por WhatsApp / Web</button>
+      </div>
+
+      <div id="mensaje-venta" style="margin-top: 1rem; text-align: center;"></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Boutique de Lencería - Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
